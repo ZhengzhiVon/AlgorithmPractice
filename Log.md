@@ -31,3 +31,18 @@
 - 20230417_力扣19&14&206_删除倒数第N个结点&交换结点&翻转链表
 
   摘要：虚拟头节点的应用，双指针（快慢指针）的应用，链表结点交换、删除过程中临时变量tmp所储存的值。
+
+- 20230417
+
+  摘要：
+
+  力扣160_链表相交
+  末尾对齐，然后移动curA到curB的位置再进行比较是否相同。
+
+  git错误 error: failed to push some refs to 'https://github.com/...
+
+  问题原因：远程库与本地库不一致造成的
+
+  解决方法：git pull --rebase origin master   #把远程库中的更新合并到（pull=fetch+merge）本地库中，–-rebase的作用是取消掉本地库中刚刚的commit，并把他们接到更新后的版本库之中。
+
+  [参考]: https://blog.csdn.net/qq_30152625/article/details/90404727?ops_request_misc=&amp;request_id=&amp;biz_id=102&amp;utm_term=error:%20failed%20to%20push%20some%20ref&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-1-90404727.142^v84^control,239^v2^insert_chatgpt&amp;spm=1018.2226.3001.4187
