@@ -37,6 +37,7 @@
   摘要：
 
   力扣160_链表相交
+
   末尾对齐，然后移动curA到curB的位置再进行比较是否相同。
 
   git错误 error: failed to push some refs to 'https://github.com/...
@@ -45,4 +46,8 @@
 
   解决方法：git pull --rebase origin master   #把远程库中的更新合并到（pull=fetch+merge）本地库中，–-rebase的作用是取消掉本地库中刚刚的commit，并把他们接到更新后的版本库之中。
 
-  [参考]: https://blog.csdn.net/qq_30152625/article/details/90404727?ops_request_misc=&amp;request_id=&amp;biz_id=102&amp;utm_term=error:%20failed%20to%20push%20some%20ref&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-1-90404727.142^v84^control,239^v2^insert_chatgpt&amp;spm=1018.2226.3001.4187
+  力扣142_环形链表2
+
+  双指针法（快慢指针），fast和slow的追及问题。都从head开始，Vf=2，Vs=1，fast先动，则一定相遇。
+  
+  关键：相遇节点到入口节点的距离=头节点到入口节点的距离
