@@ -30,7 +30,7 @@
 
 - **20230417_力扣19&14&206_删除倒数第N个结点&交换结点&翻转链表**
 
-  摘要：虚拟头节点的应用，双指针（快慢指针）的应用，链表结点交换、删除过程中临时变量tmp所储存的值。
+  摘要：虚拟头节点的应用，双指针（快慢指针）的应用，链表结点交换、删除过程中临时变量`tmp`所储存的值。
 
 - **20230418**
 
@@ -40,11 +40,11 @@
 
   末尾对齐，然后移动curA到curB的位置再进行比较是否相同。
 
-  git错误 error: failed to push some refs to 'https://github.com/...
+  git错误 error:` failed to push some refs to 'https://github.com/...`
 
   问题原因：远程库与本地库不一致造成的
 
-  解决方法：git pull --rebase origin master   #把远程库中的更新合并到（pull=fetch+merge）本地库中，–-rebase的作用是取消掉本地库中刚刚的commit，并把他们接到更新后的版本库之中。
+  解决方法：`git pull --rebase origin master`   #把远程库中的更新合并到（pull=fetch+merge）本地库中，`–-rebase`的作用是取消掉本地库中刚刚的`commit`，并把他们接到更新后的版本库之中。
 
   力扣142_环形链表2
 
@@ -68,7 +68,7 @@
 
   有效字母异位词：数组作哈希表，利用a~z的ASCII码作统计字典记录字符出现次数，三次遍历。
 
-  两个数组的交集：unordered_set的应用。
+  两个数组的交集：`unordered_set`的应用。
 
 - **20230424**
 
@@ -76,29 +76,37 @@
 
   哈希表算法题练习，力扣350，力扣202
 
-  数组交集2：利用unordered_map记录 nums1 中每个数字出现的次数，而 unordered_set 只能记录每个数字是否出现过，无法记录出现的次数。
+  数组交集2：利用`unordered_map`记录 `nums1` 中每个数字出现的次数，而 `unordered_set` 只能记录每个数字是否出现过，无法记录出现的次数。
 
-  快乐数：unordered_set记录每次计算的sum值，然后进行比较。
+  快乐数：`unordered_set`记录每次计算的sum值，然后进行比较。
 
 - **20230426**
 
   摘要：
 
-  哈希表算法题练习，力扣1
+  哈希表算法题练习，力扣1，454，383
 
   1 两数之和：
 
-  unordered_map, {key：数据元素，value：数组元素对应的下标}。
+  `unordered_map` {key：数据元素，value：数组元素对应的下标}。
 
-  auto iter=map.find(target-nums[i]);//iter为一个指向哈希表中某个键值对的迭代器
+  `auto iter=map.find(target-nums[i]);`//iter为一个指向哈希表中某个键值对的迭代器
 
-  return {iter->second,i};//获取并返回符合条件的数的下标，{}直接快速创建一个vector<int>容器用来接收
+  `return {iter->second,i};`//获取并返回符合条件的数的下标，{}直接快速创建一个`vector<int>`容器用来接收
 
   454 四数相加：
 
-  分组，undordered_map中存放“一半”，对比寻找target-“一半”。key:a+b的数值，value:a+b数值出现的次数。一半为a+b，一半为c+d，判断目标条件为a+b+c+d=0。
+  分组，`undordered_map`中存放“一半”，对比寻找target-“一半”。key:a+b的数值，value:a+b数值出现的次数。一半为a+b，一半为c+d，判断目标条件为`a+b+c+d=0`。
 
-  umap.find(0 - (c + d)) != umap.end()
+  `umap.find(0 - (c + d)) != umap.end()`
 
-  在C++中，map和unordered_map的find()方法都是返回一个迭代器，该迭代器指向指定键对应的键值对。如果指定的键不存在，find()方法会返回一个指向容器末尾的迭代器，即map::end()或unordered_map::end()。因此，在查找指定键对应的值时，需要判断返回的迭代器是否等于end()，以确定是否找到了指定的键。
+  在C++中，`map`和`unordered_map`的`find()`方法都是返回一个迭代器，该迭代器指向指定键对应的键值对。如果指定的键不存在，`find()`方法会返回一个指向容器末尾的迭代器，即`map::end()或unordered_map::end()`。因此，在查找指定键对应的值时，需要判断返回的迭代器是否等于`end()`，以确定是否找到了指定的键。
+
+  383 赎金信
+
+  字符串字符对比，且只有26个小写字母，所以利用一个大小为26的数组构建哈希表，来统计字符出现的次数。
+
+  `record[magazine[i]-'a'] ++`和`record[ransomNote[j]-'a']--`代表字符初选次数+1or-1
+
+  `magazine[i]-'a'` 就是该字符与字符 a 的差值，也就是该字符在字母表中的索引位置。
 
