@@ -79,3 +79,17 @@
   数组交集2：利用unordered_map记录 nums1 中每个数字出现的次数，而 unordered_set 只能记录每个数字是否出现过，无法记录出现的次数。
 
   快乐数：unordered_set记录每次计算的sum值，然后进行比较。
+
+- **20230426**
+
+  摘要：
+
+  哈希表算法题练习，力扣1
+
+  两数之和：
+
+  unordered_map, {key：数据元素，value：数组元素对应的下标}。
+
+  auto iter=map.find(target-nums[i]);//iter为一个指向哈希表中某个键值对的迭代器
+
+  return {iter->second,i};//获取并返回符合条件的数的下标，{}直接快速创建一个vector<int>容器用来接收
