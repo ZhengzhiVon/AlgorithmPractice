@@ -86,10 +86,19 @@
 
   哈希表算法题练习，力扣1
 
-  两数之和：
+  1 两数之和：
 
   unordered_map, {key：数据元素，value：数组元素对应的下标}。
 
   auto iter=map.find(target-nums[i]);//iter为一个指向哈希表中某个键值对的迭代器
 
   return {iter->second,i};//获取并返回符合条件的数的下标，{}直接快速创建一个vector<int>容器用来接收
+
+  454 四数相加：
+
+  分组，undordered_map中存放“一半”，对比寻找target-“一半”。key:a+b的数值，value:a+b数值出现的次数。一半为a+b，一半为c+d，判断目标条件为a+b+c+d=0。
+
+  umap.find(0 - (c + d)) != umap.end()
+
+  在C++中，map和unordered_map的find()方法都是返回一个迭代器，该迭代器指向指定键对应的键值对。如果指定的键不存在，find()方法会返回一个指向容器末尾的迭代器，即map::end()或unordered_map::end()。因此，在查找指定键对应的值时，需要判断返回的迭代器是否等于end()，以确定是否找到了指定的键。
+
